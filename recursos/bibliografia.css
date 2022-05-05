@@ -1,0 +1,17 @@
+.biblio{
+    font-size: 20px;
+    padding: 2px 15px;
+    background-color: #11122b;
+    color: white;
+    margin-top: 15px;
+    width: 600px;
+    border-radius: 5px;
+    height: 3500px;
+}
+.fondo{
+    height: 3700px;
+    background-color: #bf930d;
+    display: flex;
+    justify-content: space-around;
+
+}

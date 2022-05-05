@@ -1,0 +1,16 @@
+/*Para video*/
+.seccion-video{
+    background-color: cornflowerblue;
+    padding: 100px;
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.blank{
+    height: 5px;
+}

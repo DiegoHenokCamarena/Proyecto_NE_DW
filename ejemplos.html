@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejemplos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="recursos/home.css"/>
+    <link rel="stylesheet" href="recursos/nav.css"/>
+    <link rel="stylesheet" href="recursos/common.css"/>
+    <link rel="stylesheet" href="recursos/ejemplos.css"/>
+    
+</head>
+    <div class="encabezado">
+            
+            <div class="portada">
+                <div class="port-1">Nombre de la tienda</div> 
+                <div class="port-2">Slogan</div>
+            </div>
+
+            <div class="atajos">
+                <div class="link-nav">
+                    <a href="index.html">Principal</a>
+                </div>
+                <div class="link-nav">
+                    <a href="conceptos.html">Categorías</a>
+                </div>
+                <div class="link-nav">
+                    <a href="ejemplos.html">Carrito</a>
+                </div>
+                <div class="link-nav">
+                    <a href="ejercicios.html">Acerca de nosotros</a>
+                </div>
+                <div class="link-nav">
+                    <a href="video.html">Redes sociales</a>
+                </div>
+                <div class="link-nav">
+                    <a href="sw.html">Ubicaciones</a>
+                 </div>                
+            </div>
+
+            <div class="logo-unam">
+                <div class="logounam">
+                    <img src="imagenes/logo.jpg" alt="Logo" width="200px" height="200px">                </div>
+            </div>
+    </div>
+    <div class="seccion-intro">
+        <div class="top-heading">
+            <h1 style="color: aliceblue;">Ejemplos</h1>
+        </div>
+        <div class="bottom-heading">
+            <h3 style="color: aliceblue;">La finalidad de estos ejemplos es dar una visión práctica a los conceptos vistos anteriormente. Aquí encontrarás las metodologías necesarias para resolver problemas sobre congruencias y relaciones, esto para poder realizar los ejercicios propuestos de forma correcta.</h3>
+        </div>
+    </div>
+
+    
+<body>
+    <div class="blank">
+    </div>
+    <div class="mural-pa-fotos">
+        <div class="ejercicios-congr">
+            <div class="ejemps" id="try"><font size="4" face="Arial"> <p align=justify>
+                <font color="#000000"> 
+                    Ejemplo 1. Determina si la siguiente expresión es congruente: 21≡-3(mod 8)
+                </font> <br>
+                <div id="1" style="display: none;">
+                    <br>Solución: <br><br>
+                    Dado que 21 mod 8 = 5 y -3 mod 8 = 5, se concluye que la expresión es congruente.<br><br>
+                </div>
+                <center><button onclick="if(document.getElementById('1').style.display=='none'){document.getElementById('1').style.display=''}else{document.getElementById('1').style.display='none'}" title="Click to show/hide" type="button">Solución</button></center><br><br> <br>
+        
+                <font color="#000000"> 
+                    Ejemplo 2. Determina si la siguiente expresión es congruente: -7≡-22(mod 5)
+                </font> <br>
+                <div id="2" style="display: none;">
+                    <br>Solución: <br><br>
+                    Por definición, -7-(-22) = 5k , k∈Z, entonces 15 = 5k, con k=3. Por lo tanto, la expresión sí es congruente.<br><br>
+                </div>
+                <center><button onclick="if(document.getElementById('2').style.display=='none'){document.getElementById('2').style.display=''}else{document.getElementById('2').style.display='none'}" title="Click to show/hide" type="button">Solución</button></center><br><br><br>
+        
+                <font color="#000000"> 
+                    Ejemplo 3. Determina si la siguiente expresión es congruente: 28≡17(mod7)
+                </font> <br>
+                <div id="3" style="display: none;">
+                    <br>Solución: <br><br>
+                    Por definición, 28-17 = 7k, k∈Z. 11≠7k, pues no existe k∈Z tal que 7k=11. Por lo tanto, la expresión no es congruente.<br><br>
+                </div>
+                <center><button onclick="if(document.getElementById('3').style.display=='none'){document.getElementById('3').style.display=''}else{document.getElementById('3').style.display='none'}" title="Click to show/hide" type="button">Solución</button></center><br><br><br>
+        
+                <font color="#000000"> 
+                    Ejemplo 4. Obtén la solución general de la siguiente congruencia lineal: 3x≡2(mod 7)
+                </font> <br>
+                <div id="4" style="display: none;">
+                    <br>Solución: <br><br>
+                    Dado que tenemos (mod 7), x debe estar en el rango {0,1,2,3,4,5,6}, es decir, desde 0 hasta 7-1. Puesto que 7 es un número pequeño, podemos probar para cada valor posible, comenzando con x=0:<br><br>
+                    <center><button onclick="if(document.getElementById('4.1').style.display=='none'){document.getElementById('4.1').style.display=''}else{document.getElementById('4.1').style.display='none'}" title="Click to show/hide" type="button">Paso 1</button></center><br><br>
+                    <div id="4.1" style="display: none;">
+                        - x=0 <br>
+                        3(0)≡2(mod 7), pero 0≡!2(mod 7)<br><br> 
+                    </div>
+                    <center><button onclick="if(document.getElementById('4.2').style.display=='none'){document.getElementById('4.2').style.display=''}else{document.getElementById('4.2').style.display='none'}" title="Click to show/hide" type="button">Paso 2</button></center><br><br>
+                    <div id="4.2" style="display: none;">
+                        - x=1<br>
+                    3(1)≡2(mod 7), pero 3≡!2(mod 7)<br><br>
+                    </div>
+                    <center><button onclick="if(document.getElementById('4.3').style.display=='none'){document.getElementById('4.3').style.display=''}else{document.getElementById('4.3').style.display='none'}" title="Click to show/hide" type="button">Paso 3</button></center><br><br>
+                    <div id="4.3" style="display: none;">
+                        - x=2<br>
+                        3(2)≡2(mod 7), pero 6≡!2(mod 7)<br><br>
+                    </div>
+                    <center><button onclick="if(document.getElementById('4.4').style.display=='none'){document.getElementById('4.4').style.display=''}else{document.getElementById('4.4').style.display='none'}" title="Click to show/hide" type="button">Último paso</button></center><br><br>
+                    <div id="4.4" style="display: none;">
+                        - x=3<br>
+                        3(3)≡2(mod 7), y 9≡2(mod 7)<br><br>Por tanto, un valor posible de x es 3. Como tenemos valores infinitos, podemos expresar la solución general como x=3+7t<br><br>
+                    </div>
+                    
+                </div>
+
+                
+                <center><button onclick="if(document.getElementById('4').style.display=='none'){document.getElementById('4').style.display=''}else{document.getElementById('4').style.display='none'}" title="Click to show/hide" type="button">Solución</button></center><br><br><br>
+        
+                <font color="#000000"> 
+                    Ejemplo 5. Obtén la solución general de la siguiente congruencia lineal: 4x≡2(mod 6)
+
+                </font> <br>
+                <div id="5" style="display: none;">
+                    <br>Solución: <br><br>
+                    En este caso, tenemos dos valores de x que cumplen con la congruencia. Obtenlos.<br><br>
+                    <center><button onclick="if(document.getElementById('5.1').style.display=='none'){document.getElementById('5.1').style.display=''}else{document.getElementById('5.1').style.display='none'}" title="Click to show/hide" type="button">Paso 1</button></center><br><br>
+                    <div id="5.1" style="display: none;">
+                        Los valores posibles son: x=2 y x=5 <br>
+                        Esto nos indica que existen dos conjuntos de soluciones posibles. Obtén dichos conjuntos.<br><br>
+                    </div>
+                    <center><button onclick="if(document.getElementById('5.3').style.display=='none'){document.getElementById('5.3').style.display=''}else{document.getElementById('5.3').style.display='none'}" title="Click to show/hide" type="button">Último paso</button></center><br><br>
+                    <div id="5.3" style="display: none;">
+                        - x=2+6t, t∈Z<br><br>
+                        - x=5+6t, t∈Z
+                    </div>
+                </div>
+                <center><button onclick="if(document.getElementById('5').style.display=='none'){document.getElementById('5').style.display=''}else{document.getElementById('5').style.display='none'}" title="Click to show/hide" type="button">Solución</button></center><br><br><br>
+        
+                <font color="#000000"> 
+                    Ejemplo 6. Sea X={2,3,4} y Y={3,4,5,6,7}, se define a la relación R como: (x,y)∈R si x divide a y. Encuentra la relación inversa R<sup>-1</sup>.
+                </font> <br>
+                <div id="6" style="display: none;">
+                    <br>Solución: <br><br>
+                    Primero debemos obtener el conjunto R. Obtenlo. <br> <br>
+                    <center><button onclick="if(document.getElementById('6.1').style.display=='none'){document.getElementById('6.1').style.display=''}else{document.getElementById('6.1').style.display='none'}" title="Click to show/hide" type="button">Paso 1</button></center><br><br>
+                    <div id="6.1" style="display: none;">
+                        Dado que R={(2,4),(2,6),(3,3),(3,6),(4,4)}, la relación inversa está dada por los pares ordenados de R invertidos. Obtén R <sup>-1</sup> <br><br> 
+                    </div>
+                    <center><button onclick="if(document.getElementById('6.2').style.display=='none'){document.getElementById('6.2').style.display=''}else{document.getElementById('6.2').style.display='none'}" title="Click to show/hide" type="button">Último paso</button></center><br><br>
+                    <div id="6.2" style="display: none;">
+                        R <sup>-1</sup> ={(4,2),(6,2),(3,3),(6,3),(4,4)}
+                    </div>
+                    
+                </div>
+                <center><button onclick="if(document.getElementById('6').style.display=='none'){document.getElementById('6').style.display=''}else{document.getElementById('6').style.display='none'}" title="Click to show/hide" type="button">Solución</button></center><br><br><br>
+        
+                <font color="#000000"> 
+                    Ejemplo 7. Sean A un conjunto de estudiantes y R una relación de A a A tal que (a, b)∈ R, si y sólo si a vive en el mismo dormitorio que b, demostrar que R es una relación de equivalencia.
+
+                </font> <br>
+                <div id="7" style="display: none;">
+                    <br>Solución: <br><br>
+                    <div >Primero demuestra que es reflexiva. <br><br> </div>
+                    <center><button onclick="if(document.getElementById('7.2').style.display=='none'){document.getElementById('7.2').style.display=''}else{document.getElementById('7.2').style.display='none'}" title="Click to show/hide" type="button">Paso 1</button></center><br><br>
+                <div id="7.2" style="display: none;">Puesto que cualquier persona vive en el mismo dormitorio que ella misma (aRa), R es una relación reflexiva. <br> <br> Ahora demuestra que es una relación simétrica.</div>
+                <center><button onclick="if(document.getElementById('7.3').style.display=='none'){document.getElementById('7.3').style.display=''}else{document.getElementById('7.3').style.display='none'}" title="Click to show/hide" type="button">Paso 2</button></center><br><br><br>
+                <div id="7.3" style="display: none;">Si a vive en el mismo dormitorio que b (aRb), entonces b vive en el mismo dormitorio que a (bRa). Así, R es una relación simétrica.<br><br>Finalmente, demuestra que la relación es transitiva.</div>
+                <center><button onclick="if(document.getElementById('7.4').style.display=='none'){document.getElementById('7.4').style.display=''}else{document.getElementById('7.4').style.display='none'}" title="Click to show/hide" type="button">Último paso</button></center><br><br><br>
+                <div id="7.4" style="display: none;">Si a vive en el mismo dormitorio que b y b vive en el mismo dormitorio que c, entonces a vive en el mismo dormitorio que c. Por tanto, R es una relación transitiva.<br> En consecuencia, R es una relación de equivalencia.<br><br></div>
+                </div>
+                
+                <center><button onclick="if(document.getElementById('7').style.display=='none'){document.getElementById('7').style.display=''}else{document.getElementById('7').style.display='none'}" title="Click to show/hide" type="button">Solución</button></center><br><br><br>
+        
+                <font color="#000000"> 
+                    Ejemplo 8. Sea N=100 el tamaño del arreglo, K1=7259 y K2=9359 son los dos datos que deben guardarse. Obtenga las direcciones mediante la función Hash por módulo.
+                </font> <br>
+                <div id="8" style="display: none;">
+                    <br>Solución: <br><br> Obtenemos H(K1) y H(K2) <br> <br>
+                    <center><button onclick="if(document.getElementById('8.1').style.display=='none'){document.getElementById('8.1').style.display=''}else{document.getElementById('8.1').style.display='none'}" title="Click to show/hide" type="button">Paso 1</button></center><br><br><br>
+                    <div id="8.1" style="display: none;">
+                        H(K1)=(7259 mod 100) + 1 = 60<br><br>
+                        H(K2)=(9359 mod 100) + 1 = 60<br><br>
+                        Como el resultado es el mismo, nos encontramos ante una colisión. Para evitar esto, podemos obtener la dirección con un módulo distinto de 100. 97, por ejemplo:<br><br>
+                    </div>
+                    <center><button onclick="if(document.getElementById('8.2').style.display=='none'){document.getElementById('8.2').style.display=''}else{document.getElementById('8.2').style.display='none'}" title="Click to show/hide" type="button">Último paso</button></center><br><br><br>
+                    <div id="8.2" style="display: none;">
+                        H(K1)=(7259 mod 97) + 1 = 82<br><br>
+                        H(K2)=(9359 mod 97) + 1 = 48<br><br>
+                    </div>
+                </div>
+                <center><button onclick="if(document.getElementById('8').style.display=='none'){document.getElementById('8').style.display=''}else{document.getElementById('8').style.display='none'}" title="Click to show/hide" type="button">Solución</button></center><br><br><br>
+        
+                <font color="#000000"> 
+                    Ejemplo 9. Sea N=100 el tamaño del arreglo, K1=7259 y K2=9359, son los datos que deben guardarse. Obtenga las direcciones mediante la función Hash por truncamiento.
+                </font> <br>
+                <div id="9" style="display: none;">
+                    <br>Solución: <br><br> Obtener H(K1) y H(K2) <br> <br>
+                    Esta forma de hashing es muy subjetiva, pues depende de la elección de los dígitos utilizados que elija la persona. Por tanto, las soluciones son muchas.<br>
+                    Podemos elegir los dígitos pares:<br><br>
+                    <center><button onclick="if(document.getElementById('9.1').style.display=='none'){document.getElementById('9.1').style.display=''}else{document.getElementById('9.1').style.display='none'}" title="Click to show/hide" type="button">Siguiente paso</button></center><br><br><br>
+                    <div id="9.1" style="display: none;">
+                        H(K1) = 29+1 = 30<br><br>
+                        H(K2) = 39 + 1 = 40<br>
+                    </div>
+                </div>
+                <center><button onclick="if(document.getElementById('9').style.display=='none'){document.getElementById('9').style.display=''}else{document.getElementById('9').style.display='none'}" title="Click to show/hide" type="button">Solución</button></center><br><br><br>
+        
+                <font color="#000000"> 
+                    Ejemplo 10. Sea N=100 el tamaño del arreglo, K1=7259 y K2=9359, son los datos que deben guardarse. Obtenga las direcciones mediante la función Hash por plegamiento, tomando partes de dos dígitos cada una.
+                </font> <br>
+                <center><button onclick="if(document.getElementById('10').style.display=='none'){document.getElementById('10').style.display=''}else{document.getElementById('10').style.display='none'}" title="Click to show/hide" type="button">Solución</button></center><br><br><br>
+                <div id="10" style="display: none;">
+                    <br>Solución: <br><br>
+                    H(K1) = (72+59)+1 = (131)+1 = 31+1 = 32<br><br>
+                    H(K2) = (93+59)+1 = (152)+1 = 52+1 = 53<br><br>
+                </div>
+                </div>
+                </p> </font>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.blank{
+    height: 5px;
+}
+.cuest{
+    
+    background-color: #bf930d;
+    padding: 40px 40px;
+}
+.comp{
+    background-color: #11222b;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 724px;
+}
+.calificacion{
+    background-image: url(../imagenes/dorado.jpg);
+    display: flex;
+    justify-content: center;
+}

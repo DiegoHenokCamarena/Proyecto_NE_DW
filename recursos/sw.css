@@ -1,0 +1,64 @@
+/*Hero section*/
+.seccion-intro{
+    background-image: url(../imagenes/portada.jpg);
+    padding: 100px;
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.seccion-intro > .top-heading{
+    padding: 2px 15px;
+    background-color: #11122b;
+    color: #cbcbcb;
+    width: 191px;
+    border-radius: 5px;
+}
+.seccion-intro > .bottom-heading{
+    font-size: 20px;
+    padding: 2px 15px;
+    background-color: cornflowerblue;
+    color: #11122b;
+    margin-top: 15px;
+    width: 600px;
+    border-radius: 5px;
+}
+.blank{
+    height: 5px;
+}
+.relleno{
+    height: 1000px;
+    background-color: #bf930d;
+    display: flex;
+    justify-content: center;
+}
+.doc{
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.doc a{
+    font-size: 30px;
+    color: #cbcbcb;
+    text-decoration: none;
+    transition: 1s;
+}
+.doc a:hover{
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+.cuerpo{
+    padding-top: 30px;
+    padding-left: 60px;
+}
+.input_l,.input_j{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.respesta, .respesta2{
+    display: flex;
+    justify-content: center;
+}

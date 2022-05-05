@@ -1,0 +1,75 @@
+.blank{
+    height: 5px;
+}
+.mural-pa-fotos{
+    
+    background-color: #bf930d;
+    height: auto;
+    padding: 40px 40px;
+}
+.ejercicios-congr{
+    height: auto;
+    width: 1302px;
+    color: aliceblue;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-top: 0px;
+    padding: 20px 40px;
+    display: grid;
+    justify-items: center;
+}
+.ejCongruencias a{
+    text-decoration: none;
+    color: white;    
+    font-size: 25px;
+}
+.ejFunciones a{
+    text-decoration: none;
+    color: white;
+    background-color: #11122b;
+    font-size: 25px;
+}
+.ejRelaciones a{
+    text-decoration: none;
+    color: white;
+    background-color: #11122b;
+    font-size: 25px;
+}
+.ejCongruencias{
+    height: 75px;
+    width: 500px;
+    background-color: #11122b;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.ejFunciones{
+    height: 75px;
+    width: 500px;
+    background-color: #11122b;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ejRelaciones{
+    height: 75px;
+    width: 500px;
+    background-color: #11122b;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ejemps{
+    background-color: #bf930d;
+    height: auto;
+}
