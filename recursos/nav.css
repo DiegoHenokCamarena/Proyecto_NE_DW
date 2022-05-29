@@ -12,7 +12,7 @@ body{
 
 .encabezado{
     height: 170px;
-    background-color: palevioletred;
+    background-color: #d87093;
     color: black;
     display: flex;
     justify-content: space-between;
@@ -31,10 +31,16 @@ body{
 }
 
 .port-1{
-    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
 }
 .port-2{
-    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
 }
 .port-3{
     font-size: 20px;

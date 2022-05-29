@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Conceptos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="recursos/home.css"/>
+    <link rel="stylesheet" href="recursos/nav.css"/>
+    <link rel="stylesheet" href="recursos/common.css"/>
+    <link rel="stylesheet" href="recursos/conceptos.css"/>
+    <link rel="stylesheet" href="recursos/carrusel2.css"/>
+    
+</head>
+    <div class="encabezado">
+            
+            <div class="portada">
+                <div class="port-1">Arte sano</div> 
+                <div class="port-2">El arte sano de los artesanos</div>
+            </div>
+
+            <div class="atajos">
+                <div class="link-nav">
+                    <a href="index.html">Principal</a>
+                </div>
+                <div class="link-nav">
+                    <a href="categorias.html">Categorías</a>
+                </div>
+                
+                <div class="link-nav">
+                    <a href="aboutus.html">Acerca de nosotros</a>
+                </div>
+                <div class="link-nav">
+                    <a href="redes.html">Redes sociales</a>
+                </div>
+                <div class="link-nav">
+                    <a href="ubicaciones.html">Ubicaciones</a>
+                 </div>                
+            </div>
+
+            <div class="logo-unam">
+                <div class="logounam">
+                    <img src="imagenes/logo.png" alt="Logo" width="200px" height="200px">                </div>
+            </div>  
+    </div>
+    <div class="seccion-intro">
+        <div class="top-heading">
+            <h1 style="color: aliceblue;">Conceptos</h1>
+        </div>
+        <div class="bottom-heading">
+            <h3 style="color: aliceblue; font-size: 20px;">Ropa </h3>
+            <h3 style="color: aliceblue; font-size: 20px;">Accesorios</h3>
+            <h3 style="color: aliceblue; font-size: 20px;">Joyería </h3>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Variables
+            const baseDeDatos = [
+                {
+                    id: 1,
+                    nombre: 'Bolsa de mano',
+                    descripcion: 'Bolso elaborado de forma Artesanal hecho 100% en Mexico. Útil para llevar a cualquier parte y ser el centro de atención.',
+                    precio: 349,
+                    imagen: 'imagenes/imagen-1.png'
+                },
+                {
+                    id: 2,
+                    nombre: 'Funda iPhone 8',
+                    descripcion: 'Delicado diseño artesanal: elegante textura con delicadas puntadas alrededor de la funda expresa completamente el diseño y la belleza de la simplicidad.',
+                    precio: 399,
+                    imagen: 'imagenes/imagen-2.jpg'
+                },
+                {
+                    id: 3,
+                    nombre: 'Blusa azul y rosa',
+                    descripcion:'Hermosa blusa artesanal elaborada con tela de manta y su tradicional estilo mexicano se refleja en las flores coloridas en el área de pechera.',
+                    precio: 699,
+                    imagen: 'imagenes/imagen-3.jpg'
+                },
+                {
+                    id: 4,
+                    nombre: 'Pulsera multicolor',
+                    descripcion:'Pulsera tipo escapulario ajustable tejida a mano por artesanos Huicholes en variedad de colores. Fabricado con hilo y chaquira marca Miyuki línea Delica.',
+                    precio: 149,
+                    imagen: 'imagenes/accesorios1.jpg'
+                },
+                {
+                    id: 5,
+                    nombre: 'Pendientes',
+                    descripcion:'Aretes hechos a mano con un diseño en forma de muñeca de trapo Purépecha de Michoacán. Dimensiones de 1.5 cm x 1 cm y un peso aproximado de 3 a 5 gramos.',
+                    precio: 89,
+                    imagen: 'imagenes/accesorios3.jpg'
+                },
+                {
+                    id: 6,
+                    nombre: 'Anillo zafiro',
+                    descripcion:'El anillo destacado está construido con fina plata de ley 925 y está lujosamente plateado con baño de rodio, lo que le da el aspecto dorado perfecto.',
+                    precio: 1199,
+                    imagen: 'imagenes/joyeria1.png'
+                },
+                {
+                    id: 7,
+                    nombre: 'Collar jaguar diamante',
+                    descripcion:'Collar con colgante solitario de piedra natal con una piedra natal redonda engarzada en diamante de ley altamente pulido.',
+                    precio: 6999,
+                    imagen: 'imagenes/joyeria2.png'
+                },
+                {
+                    id: 8,
+                    nombre: 'Anillo perla cyan',
+                    descripcion:'Cómodo y elegante, ideal para el uso diario. Por su material, es altamente recomendable para uso diario, lucirá espectacular en cualquier mano.',
+                    precio: 999,
+                    imagen: 'imagenes/joyeria3.png'
+                },
+                {
+                    id: 9,
+                    nombre: 'Falda negra',
+                    descripcion:'Bordado floral, cremallera hacia arriba, minifalda bodycon. Apto para citas, uso diario, uso casual, viajes, salir, al aire libre, vacaciones',
+                    precio: 499,
+                    imagen: 'imagenes/ropa1.png'
+                },
+                {
+                    id: 10,
+                    nombre: 'Blusa mosaico',
+                    descripcion:'Hermosa blusa artesanal elaborada con tela de manta y su tradicional estilo mexicano se refleja en las flores coloridas en el área de pechera.',
+                    precio: 699,
+                    imagen: 'imagenes/ropa2.png'
+                }
+
+            ];
+
+            let carrito = [];
+            const divisa = ' MXN';
+            const DOMitems = document.querySelector('#items');
+            const DOMcarrito = document.querySelector('#carrito');
+            const DOMtotal = document.querySelector('#total');
+            const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+            const miLocalStorage = window.localStorage;
+
+            // Funciones
+
+            /**
+            * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
+            */
+            function renderizarProductos() {
+                baseDeDatos.forEach((info) => {
+                    // Estructura
+                    const miNodo = document.createElement('div');
+                    miNodo.classList.add('card', 'col-sm-4');
+                    // Body
+                    const miNodoCardBody = document.createElement('div');
+                    miNodoCardBody.classList.add('card-body');
+                    // Titulo
+                    const miNodoTitle = document.createElement('h4');
+                    miNodoTitle.classList.add('card-title');
+                    miNodoTitle.textContent = info.nombre;
+                    // Descripcion
+                    const miNodoDesc = document.createElement('h5');
+                    miNodoDesc.classList.add('card-title');
+                    miNodoDesc.textContent = info.descripcion;
+                    // Imagen
+                    const miNodoImagen = document.createElement('img');
+                    miNodoImagen.classList.add('img-fluid');
+                    miNodoImagen.setAttribute('src', info.imagen);
+                    miNodoImagen.setAttribute('width','200px');
+                    miNodoImagen.setAttribute('height','200px');
+                    
+                    // Precio
+                    const miNodoPrecio = document.createElement('p');
+                    miNodoPrecio.classList.add('card-text');
+                    miNodoPrecio.textContent = `${info.precio}${divisa}`;
+                    // Boton 
+                    const miNodoBoton = document.createElement('button');
+                    miNodoBoton.classList.add('btn', 'btn-primary');
+                    miNodoBoton.textContent = '+';
+                    miNodoBoton.setAttribute('marcador', info.id);
+                    miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
+                    // Insertamos
+                    miNodoCardBody.appendChild(miNodoImagen);
+                    miNodoCardBody.appendChild(miNodoTitle);
+                    miNodoCardBody.appendChild(miNodoDesc);
+                    miNodoCardBody.appendChild(miNodoPrecio);
+                    miNodoCardBody.appendChild(miNodoBoton);
+                    miNodo.appendChild(miNodoCardBody);
+                    DOMitems.appendChild(miNodo);
+                });
+            }
+
+            /**
+            * Evento para añadir un producto al carrito de la compra
+            */
+            function anyadirProductoAlCarrito(evento) {
+                // Anyadimos el Nodo a nuestro carrito
+                carrito.push(evento.target.getAttribute('marcador'))
+                // Actualizamos el carrito 
+                renderizarCarrito();
+                // Actualizamos el LocalStorage
+                guardarCarritoEnLocalStorage();
+            }
+
+            /**
+            * Dibuja todos los productos guardados en el carrito
+            */
+            function renderizarCarrito() {
+                // Vaciamos todo el html
+                DOMcarrito.textContent = '';
+                // Quitamos los duplicados
+                const carritoSinDuplicados = [...new Set(carrito)];
+                // Generamos los Nodos a partir de carrito
+                carritoSinDuplicados.forEach((item) => {
+                    // Obtenemos el item que necesitamos de la variable base de datos
+                    const miItem = baseDeDatos.filter((itemBaseDatos) => {
+                        // ¿Coincide las id? Solo puede existir un caso
+                        return itemBaseDatos.id === parseInt(item);
+                    });
+                    // Cuenta el número de veces que se repite el producto
+                    const numeroUnidadesItem = carrito.reduce((total, itemId) => {
+                        // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
+                        return itemId === item ? total += 1 : total;
+                    }, 0);
+                    // Creamos el nodo del item del carrito
+                    const miNodo = document.createElement('li');
+                    miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+                    miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
+                    // Boton de borrar
+                    const miBoton = document.createElement('button');
+                    miBoton.classList.add('btn', 'btn-danger', 'mx-5');
+                    miBoton.textContent = 'X';
+                    miBoton.style.marginLeft = '1rem';
+                    miBoton.dataset.item = item;
+                    miBoton.addEventListener('click', borrarItemCarrito);
+                    // Mezclamos nodos
+                    miNodo.appendChild(miBoton);
+                    DOMcarrito.appendChild(miNodo);
+                });
+                // Renderizamos el precio total en el HTML
+                DOMtotal.textContent = calcularTotal();
+            }
+
+            /**
+            * Evento para borrar un elemento del carrito
+            */
+            function borrarItemCarrito(evento) {
+                // Obtenemos el producto ID que hay en el boton pulsado
+                const id = evento.target.dataset.item;
+                // Borramos todos los productos
+                carrito = carrito.filter((carritoId) => {
+                    return carritoId !== id;
+                });
+                // volvemos a renderizar
+                renderizarCarrito();
+                // Actualizamos el LocalStorage
+                guardarCarritoEnLocalStorage();
+
+            }
+
+            /**
+             * Calcula el precio total teniendo en cuenta los productos repetidos
+             */
+            function calcularTotal() {
+                // Recorremos el array del carrito 
+                return carrito.reduce((total, item) => {
+                    // De cada elemento obtenemos su precio
+                    const miItem = baseDeDatos.filter((itemBaseDatos) => {
+                        return itemBaseDatos.id === parseInt(item);
+                    });
+                    // Los sumamos al total
+                    return total + miItem[0].precio;
+                }, 0).toFixed(2);
+            }
+
+            /**
+            * Varia el carrito y vuelve a dibujarlo
+            */
+            function vaciarCarrito() {
+                // Limpiamos los productos guardados
+                carrito = [];
+                // Renderizamos los cambios
+                renderizarCarrito();
+                // Borra LocalStorage
+                localStorage.clear();
+
+            }
+
+            function guardarCarritoEnLocalStorage () {
+                miLocalStorage.setItem('carrito', JSON.stringify(carrito));
+            }
+
+            function cargarCarritoDeLocalStorage () {
+                // ¿Existe un carrito previo guardado en LocalStorage?
+                if (miLocalStorage.getItem('carrito') !== null) {
+                    // Carga la información
+                    carrito = JSON.parse(miLocalStorage.getItem('carrito'));
+                }
+            }
+
+            // Eventos
+            DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+
+            // Inicio
+            cargarCarritoDeLocalStorage();
+            renderizarProductos();
+            renderizarCarrito();
+        });
+    </script>
+
+    
+<body>
+
+    
+
+    <div class="blank">
+    </div>
+    <div class="cuerpo">
+
+        <div class="container">
+            <div class="row">
+                <!-- Elementos generados a partir del JSON -->
+                <main id="items" class="col-sm-8 row"></main>
+            </div>
+        </div>
+
+        <div class="carrito">
+            <!-- Carrito -->
+            <aside class="col-sm-4">
+                <h2>Carrito</h2>
+                <!-- Elementos del carrito -->
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <!-- Precio total -->
+                <p class="text-right">Total: <span id="total"></span> MXN</p>
+                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+            </aside>
+        </div>
+        
+              
+    </div>
+</body>
+
+</html>
